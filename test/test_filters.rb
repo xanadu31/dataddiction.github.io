@@ -443,6 +443,22 @@ class TestFilters < JekyllUnitTest
       should "not raise a TypeError when passed a hash" do
         assert @filter.absolute_url({ "foo" => "bar" })
       end
+
+      context "with a document" do
+        setup do
+          @site = fixture_site({
+            "collections" => ["methods"],
+          })
+          @site.process
+          @document = @site.collections["methods"].docs.detect do |d|
+            d.relative_path == "_methods/configuration.md"
+          end
+        end
+
+        should "make a url" do
+          assert_equal "http://example.com/base/methods/configuration.html", @filter.absolute_url(@document)
+        end
+      end
     end
 
     context "relative_url filter" do
