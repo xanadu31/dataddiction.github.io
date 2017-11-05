@@ -21,7 +21,8 @@ module Jekyll
         ).normalize.to_s
       end
 
-      # Produces a URL relative to the domain root based on site.baseurl.
+      # Produces a URL relative to the domain root based on site.baseurl
+      # unless it is already an absolute url with an authority (host).
       #
       # input - the URL to make relative to the domain root
       #
@@ -29,6 +30,7 @@ module Jekyll
       def relative_url(input)
         return if input.nil?
         input = input.url if input.respond_to?(:url)
+        return input if Addressable::URI.parse(input.to_s).absolute?
         parts = [sanitized_baseurl, input]
         Addressable::URI.parse(
           parts.compact.map { |part| ensure_leading_slash(part.to_s) }.join

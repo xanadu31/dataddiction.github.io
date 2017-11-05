@@ -19,6 +19,11 @@
   * Added github-cards to the list of plugins (#6425)
   * add post about diversity (#6447)
   * Docs: Add a note about Liquid and syntax highlighting (#6466)
+  * Add a note on `:jekyll_plugins` group in the docs (#6488)
+  * Updated custom-404-page.md (#6489)
+  * Remove `sudo` from macOS troubleshooting instructions (#6486)
+  * add formester to the list of saas form backend (#6059)
+  * Fix a few minor issues in the docs (#6494)
 
 ### Development Fixes
 
@@ -27,6 +32,16 @@
   * Docs: CoC violation correspondants (#6429)
   * add failing test for non-utf8 encoding (#6339)
   * Add configuration for first-timers bot (#6431)
+  * Update first-timers-issue-template.md (#6472)
+  * Site: Rename method (#6474)
+  * Do not linkify escaped characters as PRs in History (#6468)
+  * Rely on jekyll-mentions for linking usernames (#6469)
+  * Enable `Lint/RescueWithoutErrorClass` Cop (#6482)
+  * Added direct collection access to future collection item feature test (#6151)
+  * Clean up Rubocop config (#6495)
+  * Fix #6498: Use Gem to discover the location of bundler. (#6499)
+  * Remove unnecessary encoding comment (#6513)
+  * Suggest using Rubocop to automatically fix errors (#6514)
 
 ### Minor Enhancements
 
@@ -34,6 +49,11 @@
   * Upgrade to Rouge 3 (#6381)
   * Allow the user to set collections_dir to put all collections under one subdirectory (#6331)
   * Scope path glob (#6268)
+  * Allow plugins to modify the obsolete files. (#6502)
+  * .sass-cache doesn&#39;t *always* land in options[&#39;source&#39;] (#6500)
+  * Add Utils::Internet.connected? to determine whether host machine has internet connection. (#5870)
+  * Add latin mode to slugify (#6509)
+  * filter relative_url should keep absolute urls with scheme/authority (#6490)
 
 ### Site Enhancements
 
@@ -41,6 +61,12 @@
   * Add special styling for code-blocks run in shell (#6389)
   * Update list of files excluded from Docs site (#6457)
   * Update site History (#6460)
+  * Site: Add default twitter card image (#6476)
+  * Update normalize.css to v7.0.0 (#6491)
+
+### Bug Fixes
+
+  * Raise when theme root directory is not available (#6455)
 
 ## 3.6.2 / 2017-10-21
 
@@ -1354,7 +1380,7 @@
 
 ### Site Enhancements
 
-  * Add `@alfredxing` to the `@jekyll/core` team. :tada: (#3218)
+  * Add @alfredxing to the @jekyll/core team. :tada: (#3218)
   * Document the `-q` option for the `build` and `serve` commands (#3149)
   * Fix some minor typos/flow fixes in documentation website content (#3165)
   * Add `keep_files` to configuration documentation (#3162)
